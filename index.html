@@ -10,6 +10,7 @@
 <body>
     <header>
         <h1>Robocode Marketplace</h1>
+        <h2><a href="admin.html">Admin page.</a></h2>
         <div id="cart">
             <button id="cart-button" onclick="openCart()">
                 <img src="img/cart.png" alt="cart">
@@ -21,9 +22,23 @@
         </div>
     </header>
     <main>
-        <div id="products-grid">
-            
-        </div>
+        <div id="products-grid"></div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div id="order-block"></div>
+                <form id="order-form">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="text" name="address" placeholder="Delivery addres" required>
+                    <input type="tel" name="phone" placeholder="Phone number" required>
+                    <input type="number" name="post_number" placeholder="Post office number" required>
+                    <h2>total price <span id="price"></span></h2>
+                    <input type="submit" value="order">
+                </form>
+            </div>
+            <div id="modal-close">❌</div>
+        </div> 
+    
     </main>
 </body>
 <script src="script.js" defer></script>
